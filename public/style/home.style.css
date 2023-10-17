@@ -1,0 +1,150 @@
+main {
+    display: flex;
+}
+
+body {
+    background-color: aliceblue;
+    text-align: center;
+    /* min-height: 800px; */
+}
+
+footer {
+    background-color: darkcyan;
+    justify-content: baseline;
+    padding: 0.25rem;
+}
+
+nav {
+    /* position: fixed; */
+    /* display: flex; */
+    /* width: 100%; */
+    background-color: cadetblue;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+
+}
+
+.afficheAll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.afficheAll img {
+    max-height: 230px;
+}
+
+ul.comment {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.schoolBookBlog {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#id {
+    display: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+.schoolBookArticle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.afficheComment {
+    width: 300px;
+    border: 1px, solid, crimson;
+    border-radius: 25px;
+    background-color: pink;
+    color: crimson;
+    padding: 0.7rem;
+    margin: 1rem;
+}
+
+.afficheAllDiv {
+    border: 1px, solid, crimson;
+    border-radius: 25px;
+    background-color: pink;
+    color: crimson;
+    padding: 0.7rem;
+    margin: 1rem;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: burlywood;
+}
+
+a:visited {
+    list-style-type: none;
+    text-decoration: none;
+    color: burlywood;
+  
+}
+
+a:hover {
+    list-style-type: none;
+    text-decoration: none;
+    color: pink;
+  
+}
+
+a:active {
+    list-style-type: none;
+    text-decoration: none;
+    color: bisque;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+p {
+    color: blueviolet;
+}
+
+button {
+    background-color: pink;
+    color: crimson;
+    /* border: 5px, solid, crimson; */
+    border-radius: 25px;
+}
+
+img {
+    border-radius: 25px;
+}

@@ -1,0 +1,11 @@
+<h1>Commentaires</h1>
+<ul class="comment">
+    <% allComment.forEach( cmt => { %>
+        <li>
+            <div>
+                <h3><%= cmt.Prenom %></h3>
+                <p><%= cmt.Content %></p>
+            </div>
+        </li>
+    <% }) %>
+</ul>

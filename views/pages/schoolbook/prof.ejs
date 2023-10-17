@@ -1,0 +1,82 @@
+<h1>Bienvenue dans ta classe virtuelle /Prof/</h1>
+
+<ul class="schoolBookBlog">
+    <% artProf.forEach( art => { %>
+        <li>
+            <div class="schoolBookArticle">
+                <h2>Id = <%= art.IdClasse %></h2>
+                <h3><%= art.Titre %></h3>
+                <img src='<%= art.Img %>' alt="Image" width="550">
+                <p><%= art.Desc %></p>
+
+                <h4>Commentaire(s)</h4>
+                <% art.listComm.forEach( com => { %>
+                    <div class="afficheComment">
+                        <p><%= com.Prenom %></p>
+                        <p><%= com.Content %></p>
+                    </div>
+                <% }) %>
+
+                <h4>Commenter:</h4>
+                <form name="formBlogCom" action="/schoolbook/profAddCom" method="post">
+                    <input type="text" name="idClasse" id="idClasse" value="<%= art.IdClasse %>" hidden>
+                    <input type="text" name="idBlog" id="idBlog" value="<%= art.IdBlog %>" hidden>
+                    <div>
+                        <label for="prenom">Prénom: </label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="content">Ecris ton commentaire: </label>
+                        <textarea name="content" id="content" cols="50" rows="5" required></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                    <br>
+                </form>
+
+            </div>
+        </li>
+    <% }) %>
+</ul>
+
+
+<h2>Ajouter un article dans le blog</h2>
+<form name="formBlog" action="/schoolbook/profAddArt" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="titre">Titre: </label>
+        <input type="text" name="titre" id="titre">
+    </div>
+    <br>
+    <div>
+        <label for="img">Image: </label>
+        <input type="file" name="img" id="img">
+    </div>
+    <br>
+    <div>
+        <label for="desc">Description: </label>
+        <textarea name="desc" id="desc" cols="50" rows="5" required></textarea>
+    </div>
+    <br>
+    <div>
+        <label for="idClasse">IdClasse: </label>
+        <input type="text" name="idClasse" id="idClasse">
+    </div>
+    <br>
+    <div>
+        <button type="submit">Envoyer</button>
+    </div>
+</form>
+
+
+<h2>Recevoir messages</h2>
+<% msgProf.forEach( msg => { %>
+    <div class="afficheComment">
+        <h4>Message de:</h4>
+        <p><%= msg.Prenom %></p>
+        <h4>Contenu:</h4>
+        <p><%= msg.Content %></p>
+    </div>
+<% }) %>

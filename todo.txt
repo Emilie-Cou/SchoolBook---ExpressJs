@@ -1,0 +1,2 @@
+<!-- <%- '<style>' + include(`../../public/style/home.style.css`) + '</style>' %> -->
+<img src='data:image/jpeg;base64, <%= image %>' alt="Ecole du bas" width="300">
