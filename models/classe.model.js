@@ -10,7 +10,6 @@ const classeModel = {
     },
 
     getOne : async (id) => {
-        console.log(id);
         const db = await dbConnection.getDbConnection();
         let result = await db.query(`SELECT c.IdClasse, c.Description, c.Img, c.NomClasse, p.Nom FROM Classe as c join Professor as p on c.IdProf = p.IdProf WHERE c.IdClasse = '${id}'`)
         db.close();

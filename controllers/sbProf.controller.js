@@ -39,8 +39,8 @@ const sbProfController = {
     profAddArt : async (req, res) => {
         try {
             const validatedData = await articleSchema.validate(req.body);
-            let imgPathSplit = req.file.path.split('pics');
-            validatedData.imgPath = imgPathSplit[1];
+            let imgPathSplit = req.file.path.split('pics'); // Utilisation du split() pour ne garder qu'un certain morceau du nom ↓↓
+            validatedData.imgPath = imgPathSplit[1];        // afin de les stocker au bon endroit pour pouvoir les afficher correctement
             let redirectId = await sbProfModel.profAddArt(validatedData);
             res.redirect(`/schoolbook/${redirectId}`);
         }
